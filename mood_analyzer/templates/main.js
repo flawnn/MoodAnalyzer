@@ -28,7 +28,14 @@ function getMood(){
     //Placeholder
     //setTimeout(function(){receiveServerResponse(testData, "OK")}, 1000);
     currentTheme=hashtagInput;
-    $.post("http://100.100.219.136/hashtag/",{"hashtag":hashtagInput}, receiveServerResponse);
+    //$.post("http://100.100.219.136/hashtag/",{"hashtag":hashtagInput}, receiveServerResponse);
+    $.ajax({
+        type: 'POST',
+        contentType: "application/json",
+        url: 'http://100.100.219.136/hashtag/',
+        data: JSON.stringify({ "hashtag": hashtagInput , "days": document.getElementById("days").value}),
+        success: receiveServerResponse
+    });
   }else{
     console.log("Invalid user-input");
   }
