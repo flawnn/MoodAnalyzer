@@ -1,0 +1,56 @@
+/** General CSS Rules**/
+#preloader{
+  margin-top: 25px;
+}
+
+h2{
+  text-align: center;
+  color: #a2a2a2;
+  margin-top: 2em;
+}
+
+/** Small devices (Smartphones)**/
+@media (max-width: 600px){
+  #getMoodButton{
+    width: 100%;
+  }
+
+  #preloader{
+    left: 38%;
+  }
+
+  #percent-circle{
+    margin: 0 auto;
+    position: relative;
+    float: none !important;
+  }
+
+  #percent-circle-wrapper{
+    width: 100%;
+    position: relative;
+  }
+
+  h2{
+    margin: 0 5px;
+    font-size: 3em;
+  }
+}
+
+/** medium and big devices **/
+@media (min-width: 601px){
+  #search-wrapper{
+    margin-top: 10px;
+  }
+
+  #preloader{
+    left: 45.5%;
+  }
+
+  #percent-circle{
+    left: 40%;
+  }
+
+  h2{
+    margin: 0 35px;
+  }
+}

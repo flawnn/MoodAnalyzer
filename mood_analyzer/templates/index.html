@@ -1,10 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
-    Index
-</body>
+<html>
+  <head>
+    <title>Stimmungsmesser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <!--Import icons-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS for materializecss-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript for materializecss -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <!--Import my own CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--Import my own JS-->
+    <script src="main.js"></script>
+    <!--Perzentage circle-->
+    <link rel="stylesheet" href="circle.css">
+  </head>
+  <body id="body">
+    <!--Hashtag input-->
+    <div class="row" id="search-wrapper">
+      <div class="input-field col s12 m2 offset-m4">
+        <input placeholder="#Your Hashtag" id="hashtag-input" type="text" class="validate">
+      </div>
+      <div class="input-field col s12 m5">
+        <a href="javascript:getMood()" id="getMoodButton" class="waves-effect waves-light btn"><i class="material-icons left">search</i>get mood</a>
+      </div>
+    </div>
+    <h2 id="slogan">Hey, do you wanna know how Twitter Users think about a topic?</h2>
+    <!--Multicolored Preloader (default: invisible)-->
+    <div id="preloader" class="preloader-wrapper big active" style="display:none">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    <div id="percent-circle-wrapper" style="display:none">
+      <div id="percent-circle" class="big c100 p0">
+        <span id="percent-span">0%</span>
+        <div class="slice">
+          <div class="bar"></div>
+          <div class="fill"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
