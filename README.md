@@ -2,6 +2,7 @@
 A simple solution to see how people think about a subject ( a prototype)
 # Roadmap
 - Add an input to specify, how many tweets will be analyzed
+
 # Contributors
 NightScap3,
 YpsilonZett,
