@@ -6,5 +6,5 @@ YpsilonZett,
 Moritz157,
 Alissar
 # The Idea
-This idea was created 2016 at JugendHackt Berlin and was visualized in 2 Days
+This idea was created 2016 at JugendHackt Berlin and was realized in 2 Days
 
