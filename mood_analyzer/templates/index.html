@@ -23,10 +23,12 @@
   <body id="body">
     <!--Hashtag input-->
     <div class="row" id="search-wrapper">
+      <!-- The hashtag textinput -->
       <div class="input-field col s12 m3 offset-m2">
         <input placeholder="#Dein Hashtag" id="hashtag-input" type="text" class="validate">
       </div>
-      <div class="input-field col s2 m2">
+      <!-- Input about how many days will be searched-->
+      <div class="input-field col s12 m2">
         <select id="days">
           <option value="0">Heute</option>
           <option value="1">Gestern</option>
@@ -38,13 +40,20 @@
         </select>
         <label>Zeitraum</label>
       </div>
+      <!-- Number of tweets to be searched -->
+      <div class="input-field col s12 m2" style="display:none">
+        <input placeholder="Anzahl der Tweets" id="number-input" type="number" class="validate">
+      </div>
+      <!-- Submit Button -->
       <div class="input-field col s12 m5">
         <a href="javascript:getMood()" id="getMoodButton" class="waves-effect waves-light btn"><i class="material-icons left">search</i>stimmung ermitteln</a>
       </div>
     </div>
+    <!-- Disabled Feature! -->
     <h2 id="slogan"></h2>
     <!--Multicolored Preloader (default: invisible)-->
     <div id="preloader" class="preloader-wrapper big active" style="display:none">
+      <!--The blue part of the preloader-->
       <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
           <div class="circle"></div>
@@ -54,7 +63,7 @@
           <div class="circle"></div>
         </div>
       </div>
-
+      <!--The red part of the preloader-->
       <div class="spinner-layer spinner-red">
         <div class="circle-clipper left">
           <div class="circle"></div>
@@ -64,7 +73,7 @@
           <div class="circle"></div>
         </div>
       </div>
-
+      <!--The yellow part of the preloader-->
       <div class="spinner-layer spinner-yellow">
         <div class="circle-clipper left">
           <div class="circle"></div>
@@ -74,7 +83,7 @@
           <div class="circle"></div>
         </div>
       </div>
-
+      <!--The green part of the preloader-->
       <div class="spinner-layer spinner-green">
         <div class="circle-clipper left">
           <div class="circle"></div>
@@ -85,6 +94,7 @@
         </div>
       </div>
     </div>
+    <!--The circular percent diagram-->
     <div id="percent-circle-wrapper" style="display:none">
       <div id="percent-circle" class="big c100 p0">
         <span id="percent-span"><font style="color: red"></font><font>/</font><font style="color: green"></font></span>
@@ -93,17 +103,25 @@
           <div id="fill" class="fill"></div>
         </div>
       </div>
+      <!--Info about how much percent are in negative mood-->
       <div id="negInfoText">
         <h4>65% des Internets sind in negativer Stimmung zum Thema jugendhackt</h4>
       </div>
+      <!-- Info about how much percent are in positive mood -->
       <div id="posInfoText">
         <h4>35% des Internets sind in positiver Stimmung zum Thema jugendhackt</h4>
       </div>
     </div>
+    <a href="https://github.com/NightScap3/MoodAnalyzer" target="_blank" style="position: absolute;bottom: 15px;left: 15px;"><img style="top: 6px;position: relative;" id="github" src="GitHub-Mark.png"><span>    View on Github</span></a>
+    <a href="https://twitter.com/moritz157" target="_blank" style="position: absolute;bottom: 15px;left: 150px;"><img style="top: 6px;position: relative;" id="github" src="https://www.seeklogo.net/wp-content/uploads/2015/09/twitter-icon-circle-logo.png"><span>    Moritz on Twitter</span></a>
+    <a href="https://twitter.com/_unknown898" target="_blank" style="position: absolute;bottom: 15px;left: 300px;"><img style="top: 6px;position: relative;" id="github" src="https://www.seeklogo.net/wp-content/uploads/2015/09/twitter-icon-circle-logo.png"><span>    Baran on Twitter</span></a>
+
+    <!-- Enable the special "select"-input -->
     <script>
-    $(document).ready(function() {
-      $('select').material_select();
-    });
+      $(document).ready(function() {
+        $('select').material_select();
+      });
     </script>
   </body>
 </html>
+<!-- ALPAKAS AN DIE MACHT! -->

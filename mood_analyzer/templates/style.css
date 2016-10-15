@@ -40,6 +40,11 @@ canvas{
   z-index: -1;
 }
 
+#github{
+  width: auto;
+  height: 25px;
+}
+
 /** Small devices (Smartphones)**/
 @media (max-width: 600px){
   #getMoodButton{
