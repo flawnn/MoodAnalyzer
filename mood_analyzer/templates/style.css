@@ -9,6 +9,12 @@ h2{
   margin-top: 2em;
 }
 
+canvas{
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
 /** Small devices (Smartphones)**/
 @media (max-width: 600px){
   #getMoodButton{

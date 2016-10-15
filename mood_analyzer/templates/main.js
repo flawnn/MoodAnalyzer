@@ -1,6 +1,9 @@
 var testData = {"mood": -83};
 var negativeColorCode = "#ef5350";
+var negativePalette = "Reds";
 var positiveColorCode = "#66bb6a";
+var positivePalette = "Greens";
+
 
 function getMood(){
   //Get the entered hashtag
@@ -36,13 +39,23 @@ function receiveServerResponse(data, status){
   if(data.mood>0){
     //Set the background to the defined positive color
     document.getElementById("body").style.backgroundColor=positiveColorCode;
+    var pattern = Trianglify({
+      height: document.body.clientHeight,
+      width: document.body.clientWidth,
+      x_colors: positivePalette,
+      cell_size: 40});
   }else if(data.mood<0){
     //Set the background to the defined negative color
     document.getElementById("body").style.backgroundColor=negativeColorCode;
+    var pattern = Trianglify({
+      height: document.body.clientHeight,
+      width: document.body.clientWidth,
+      x_colors: negativePalette,
+      cell_size: 40});
     //Invert the mood if it's negative
     percent=percent*(-1);
   }
-
+  document.body.appendChild(pattern.canvas());
   //Start the animation to display the percent
   setPercent(percent);
 }
