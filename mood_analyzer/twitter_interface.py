@@ -2,8 +2,7 @@ from loklak import Loklak
 import datetime
 
 
-loklak = Loklak()
-def get_tweets(hashtag, since=14, count=500):
+def get_tweets(hashtag, since=0, count=100):
     """
     Fetches all tweets to a given hashtag
     :param hashtag: (str) keyword
@@ -11,21 +10,16 @@ def get_tweets(hashtag, since=14, count=500):
     :param count: (int) count
     :return: (list, int, int) 1. Content, 2.
     """
-    now = datetime.datetime.now()
-    since2 = now + datetime.timedelta(days=-since)
-    since2 = datetime.datetime.strftime(since2, "%Y-%m-%d")
-    tweet_list = []
 
-    for t in loklak.search(hashtag, since=since2, count=count)["statuses"]:
-        """Parameters: self, query=None, since=None, until=None, from_user=None, count=None """
+    l = Loklak()
+    since = datetime.datetime.now() + datetime.timedelta(days=-since)
+    since = datetime.datetime.strftime(since, "%Y-%m-%d")
+    tweet_list = []
+    for t in l.search(hashtag, since=since, count=count)["statuses"]:
         tweet_list.append(t["text"])
-    return tweet_list, len(tweet_list), since
+
+    return tweet_list #, len(tweet_list), since
 
 
 if __name__ == "__main__":
-    counter = 0
-    for tweets in get_tweets("Trump"):
-        counter += 1
-        print(tweets, counter, )
-
-
+    print(get_tweets(('trump')))
