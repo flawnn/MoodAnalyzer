@@ -9,18 +9,16 @@ def get_tweets(hashtag, since=14, count=500):
     :param hashtag: (str) keyword
     :param since: (str) Y-M-D
     :param count: (int) count
-    :return: (list) list of json strings with content
+    :return: (list, int, int) 1. Content, 2.
     """
     now = datetime.datetime.now()
-    since = now + datetime.timedelta(days=-since)
-    since = datetime.datetime.strftime(since, "%Y-%m-%d")
-    print(since)
+    since2 = now + datetime.timedelta(days=-since)
+    since2 = datetime.datetime.strftime(since2, "%Y-%m-%d")
     tweet_list = []
 
-    for t in loklak.search(hashtag, since=since, count=count)["statuses"]:
+    for t in loklak.search(hashtag, since=since2, count=count)["statuses"]:
         """Parameters: self, query=None, since=None, until=None, from_user=None, count=None """
         tweet_list.append(t["text"])
-
     return tweet_list, len(tweet_list), since
 
 
