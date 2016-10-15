@@ -1,19 +1,24 @@
 
-def read_moodlist(fname):
+def parse_dict_file(fname):
+    """
+    Parses the dictionary file
+    :param fname: (str) path to file
+    :return:  (dict) {(str) word: (int) 1/-1} (1 is good, -1 is bad)
+    """
+
     result = {}
     with open(fname) as f:
         for line in f.readlines():
-            if not line.startswith("%%"):
-                word, value = line.split(" ")
-                sign, value = value.split("=")
-                value = float(value)
+            if not line.startswith('%%'):
+                words = line.split()
+                sign, value = words[1].split('=')
                 if sign == "POS":
-                    result[word] = +1
-                if sign == "NEG":
-                    result[word] = -1
+                    result[words[0]] = +1
+
+                elif sign == "NEG":
+                    result[words[0]] = -1
+
     return result
-
-
 
 
 
