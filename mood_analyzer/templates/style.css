@@ -1,0 +1,100 @@
+/** General CSS Rules**/
+#preloader{
+  margin-top: 25px;
+}
+
+#bar{
+  border-color: #66bb6a;
+}
+
+.bar{
+  border: 0.08em solid #66bb6a !important;
+}
+
+#percent-circle{
+  background-color: #e4544a;
+}
+
+#percent-circle::after{
+  top: 0.05em;
+  left: 0.05em;
+  width: 0.90em;
+  height: 0.90em;
+}
+
+#percent-span{
+  font-size: 0.2em;
+  width: 5em;
+  line-height: 5em;
+}
+
+h2{
+  text-align: center;
+  color: #a2a2a2;
+  margin-top: 2em;
+}
+
+canvas{
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+/** Small devices (Smartphones)**/
+@media (max-width: 600px){
+  #getMoodButton{
+    width: 100%;
+  }
+
+  #preloader{
+    left: 38%;
+  }
+
+  #percent-circle{
+    margin: 0 auto;
+    position: relative;
+    float: none !important;
+  }
+
+  #percent-circle-wrapper{
+    width: 100%;
+    position: relative;
+  }
+
+  h2{
+    margin: 0 5px;
+    font-size: 3em;
+  }
+}
+
+/** medium and big devices **/
+@media (min-width: 601px){
+  #search-wrapper{
+    margin-top: 10px;
+  }
+
+  #preloader{
+    left: 45.5%;
+  }
+
+  #percent-circle{
+    left: 40%;
+  }
+
+  h2{
+    margin: 0 35px;
+  }
+
+  #negInfoText, #posInfoText{
+    position: absolute;
+    width: 500px;
+  }
+
+  #posInfoText{
+    right: 0px;
+  }
+
+  #negInfoText{
+    left: 15px;
+  }
+}
